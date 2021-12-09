@@ -13,6 +13,7 @@
 		E5CAE3A02762703D00928C5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CAE39E2762703D00928C5F /* Main.storyboard */; };
 		E5CAE3A22762704000928C5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5CAE3A12762704000928C5F /* Assets.xcassets */; };
 		E5CAE3A52762704000928C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5CAE3A32762704000928C5F /* LaunchScreen.storyboard */; };
+		E5CAE3AD276271CB00928C5F /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CAE3AC276271CB00928C5F /* MyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E5CAE3A12762704000928C5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5CAE3A42762704000928C5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5CAE3A62762704000928C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CAE3AC276271CB00928C5F /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E5CAE39A2762703D00928C5F /* SceneDelegate.swift */,
 				E5CAE39C2762703D00928C5F /* ViewController.swift */,
 				E5CAE39E2762703D00928C5F /* Main.storyboard */,
+				E5CAE3AC276271CB00928C5F /* MyViewController.swift */,
 				E5CAE3A12762704000928C5F /* Assets.xcassets */,
 				E5CAE3A32762704000928C5F /* LaunchScreen.storyboard */,
 				E5CAE3A62762704000928C5F /* Info.plist */,
@@ -140,6 +143,7 @@
 			files = (
 				E5CAE39D2762703D00928C5F /* ViewController.swift in Sources */,
 				E5CAE3992762703D00928C5F /* AppDelegate.swift in Sources */,
+				E5CAE3AD276271CB00928C5F /* MyViewController.swift in Sources */,
 				E5CAE39B2762703D00928C5F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
