@@ -15,9 +15,11 @@ class ViewController: UIViewController {
         Question(question: "The Capital of İran is: ", answers: ["yazd","Qum","Tahran","Turkmensahra"], correctAnswer: 2),
  Question(question: "The Capital of Turkey is: ", answers: ["Antalya","Ankara","İstanbul","Turkmensahra"], correctAnswer: 1),
 Question(question: "The Capital of Russia is: ", answers: ["Moscow","Sochi","Berlin","Turkmensahra"], correctAnswer: 0),
- Question(question: "The Capital of İran is: ", answers: ["yazd","Qum","Tahran","Turkmensahra"], correctAnswer: 2),
-   Question(question: "The Capital of İran is: ", answers: ["yazd","Qum","Tahran","Turkmensahra"], correctAnswer: 2),
-    
+        Question(question: "The Capital of Norwey is: ", answers: ["Oslo","Stravanger","Amsterdam","Balkanabat"], correctAnswer: 0),
+        Question(question: "The Capital of Finland is: ", answers: ["Ashgabat","Gollen","Helsinki", "Prag"], correctAnswer: 2),
+        Question(question: "The Capital of Sweden is: ", answers: ["Stokholm", "Malmö","Helsinki", "Varshav"], correctAnswer: 0),
+        Question(question: "The Capital of China is: ", answers: ["Ashgabat","Pekin","Helsinki", "Prag"], correctAnswer: 1),
+        Question(question: "The Capital of Afghanistan is: ", answers: ["Kabul","Meshed","Handegar", "Tahran"], correctAnswer: 0),
     
     ]
     
@@ -69,11 +71,10 @@ func loadNextQuestion(){
     {
         currentQuestionPos += 1
         currentQuestion = questions[currentQuestionPos]
+        setQuestion()
     }else{
         performSegue(withIdentifier: "ShowResults", sender: nil)
-        
-       
-  
+   
     }
 
 }
@@ -88,7 +89,14 @@ func loadNextQuestion(){
         
         
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ShowResults"){
+            var vc = segue.destination as! MyViewController
+            vc.noCorrect = noCorrect
+            vc.total = questions.count
+    }
+        
+    }
     
     
     
@@ -98,6 +106,14 @@ func loadNextQuestion(){
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        currentQuestion = questions[0]
+        setQuestion()
+        
+        
+        
+        
+        
     }
 
 override func didReceiveMemoryWarning(){
